@@ -1,7 +1,7 @@
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import logo from "../assets/logo1.png";
-import { navItems } from "../constants";
+import { navItems } from "../constants/Data";
 
 const Navbar = () => {
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
@@ -16,7 +16,7 @@ const Navbar = () => {
         <div className="flex justify-between items-center">
           <div className="flex items-center flex-shrink-0">
             <img className="h-20 w-30 translate-y-1 translate-x-4 " src={logo} alt="Logo" />
-            <span className="text-xl tracking-tight">Mayan Exim Global Transit</span>
+            <span className="text-xl tracking-tight font-unbounded">Mayan Exim Global Transit</span>
           </div>
           <ul className="hidden lg:flex ml-14 space-x-12 ">
             {navItems.map((item, index) => (
@@ -26,7 +26,7 @@ const Navbar = () => {
             ))}
           </ul>
           <div className="hidden lg:flex justify-center space-x-12 items-center">
-            <a href="#" className="py-2 px-3 border rounded-md hover:text-[#3A5A40]">
+            <a href="#" className="py-2 px-3 translate-x-3 border rounded-md hover:text-[#3A5A40]">
               Get a Quote
             </a>
             <a
